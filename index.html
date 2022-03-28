@@ -1,0 +1,58 @@
+<html>
+
+<head>
+  <title>Multiplayer Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" type="text/css">
+</head>
+
+<body>
+
+  <div class="game-container">
+  </div>
+  <div class="player-info-instruction">
+    <div>
+      <label for="player-name">Instructions</label>
+      <p>Use your arrow keys to move around. <br />
+        Eat the coins till the timer goes off. <br />
+        The highest number is the final winner, <br />
+        to win an exclusive promo code to use <br />
+        within Scootaverse!
+      </p>
+    </div>
+  </div>
+  <div class="player-info">
+    <div>
+      <label for="player-name">Your Name</label>
+      <input id="player-name" maxlength="10" type="text" />
+    </div>
+    <div>
+      <button id="player-color">Change Color</button>
+    </div>
+  </div>
+
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+  <script>
+    // NOTE - INCLUDE YOUR FIREBASE CONFIG HERE FOR ANYTHING TO WORK:
+    const firebaseConfig = {
+      apiKey: "AIzaSyDAqiL_4FQom5X5rtcN1dKM8umL5bjhXXo",
+      authDomain: "multiplayer-demo-bc128.firebaseapp.com",
+      databaseURL: "https://multiplayer-demo-bc128-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "multiplayer-demo-bc128",
+      storageBucket: "multiplayer-demo-bc128.appspot.com",
+      messagingSenderId: "304145258483",
+      appId: "1:304145258483:web:9b3b1dfc9cd5e585082486"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <script src="/KeyPressListener.js"></script>
+  <script src="/app.js"></script>
+</body>
+
+</html>
